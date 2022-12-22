@@ -1,0 +1,170 @@
+# Ujian Akhir Semester 
+<br> Mata Kuliah : Dasar Pemrograman
+<br> Nama		     : Nabila Ismiyati Mubarokah
+<br> NIM		     : 1227050099
+<br> Jurusan		 : [Teknik Informatika](http://if.uinsgd.ac.id/) [UIN Sunan Gunung Djati Bandung](https://uinsgd.ac.id/) 
+
+
+## Deskripsi Umum
+Array adalah kumpulan dari nilai-nilai data bertipe sama dalam urutan
+tertentu yang menggunakan sebuah nama yang sama. Nilai-nilai data di suatu
+array disebut dengan elemen-elemen array. Letak urutan dari elemen-elemen
+array ditunjukkan oleh suatu subscript atau indeks. Pada saat pendeklarasian
+array, kompiler mengalokasikan memori yang cukup untuk menampung semua
+elemen sesuai dengan yang dideklarasikan. Adapun array dibedakan menjadi
+tiga macam, yaitu array berdimensi satu, array berdimensi dua, dan array
+berdimensi banyak. 
+
+
+## Source Code
+---- no 1 ----
+#include <iostream>
+using namespace std;
+
+int main(){
+  cout << "Nama : Nabila Ismiyati Mubarokah\n"
+  	   << "NIM  : 1227050099\n\n";
+  int i, j, x, y, matriks[20][20], pemutaran[20][20];
+
+  cout << "Masukkan baris matriks: ";
+  cin >> x;
+  cout << "Masukkan kolom matriks: ";
+  cin >> y;
+  cout << endl;
+
+  cout << "Masukkan value matriks \n";
+  for (i = 0; i < x; i++) {
+    for (j = 0; j < y; j++) {
+      cout << "Value Baris " << i+1 << " Kolom " << j+1 << " = " ;
+	  cin  >> matriks[i][j];
+    }
+  }
+  cout << "\n";
+
+  cout << "Matriks Sebelum Diubah : \n";
+  for (i = 0; i < x; i++){
+    for (j = 0; j < y; j++){
+      cout << matriks[i][j] << "\t";
+    }
+    cout << endl;
+  }
+  
+  
+  for (i = 0; i < x; i++){
+    for (j = 0; j < y; j++){
+      pemutaran[j][i] = matriks[i][j];
+    }
+  }
+
+  cout << "Hasil Pemutaran Matriks: \n";
+  for (i = 0; i < y; i++){
+    for (j = 0; j < x; j++){
+      cout << pemutaran[i][j] << "\t";
+    }
+    cout << endl;
+  }
+}
+
+
+---- no 2 ----
+#include <iostream>
+using namespace std;	
+
+int main() {
+	int Z [100] [100];
+	int x, y, i, j, hasil;
+	
+	cout << "Mencari Value Yang Habis Dibagi Dengan Nilai 3, 5, 7\n";
+	cout << "Nama: Nabila Ismiyati Mubarokah\n";
+	cout << "NIM: 1227050099\n\n";
+		 
+		 
+	cout << "Masukkan baris matriks : ";
+	cin >> x;
+	cout << "Masukkan kolom matriks : ";
+	cin >> y;
+	cout << endl;
+	
+	for (i = 0; i < x; i++){
+		for (j = 0; j < y; j++){
+			  cout << "Value Baris " << i+1 << " Kolom " << j+1 << " = ";
+			  cin >> Z [i][j];
+		}
+		cout << endl;
+	}
+	
+	cout << "Matriks" << endl ;
+	for (i = 0; i < x; i++){
+		for (j = 0; j < y; j++) {
+			 cout << Z [i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl << "Nilai Matriks yang Habis Dibagi 3,5,7 \n";
+	for (i = 0; i < x; i++){
+		for (j = 0; j < y; j++){
+			if(Z [i][j] %3 == 0){
+				cout << "\t" << Z [i][j];
+			}
+			else if(Z [i][j] %5 == 0){
+				cout<< "\t" << Z [i][j];
+			}
+			else if(Z [i][j] %7 == 0){
+				cout << "\t" << Z [i][j];
+			}
+			else {
+				cout << "\t" << endl;
+			}
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+
+
+## Output
+Nama : Nabila Ismiyati Mubarokah
+NIM  : 1227050099
+
+Masukkan baris matriks: 2
+Masukkan kolom matriks: 2
+
+Masukkan value matriks
+Value Baris 1 Kolom 1 = 3
+Value Baris 1 Kolom 2 = 5
+Value Baris 2 Kolom 1 = 7
+Value Baris 2 Kolom 2 = 9
+
+Matriks Sebelum Diubah :
+3       5
+7       9
+Hasil Pemutaran Matriks:
+3       7
+5       9
+
+--------------------------------
+
+Mencari Value Yang Habis Dibagi Dengan Nilai 3, 5, 7
+Nama: Nabila Ismiyati Mubarokah
+NIM: 1227050099
+
+Masukkan baris matriks : 2
+Masukkan kolom matriks : 2
+
+Value Baris 1 Kolom 1 = 11
+Value Baris 1 Kolom 2 = 6
+
+Value Baris 2 Kolom 1 = 8
+Value Baris 2 Kolom 2 = 7
+
+Matriks
+11      6
+8       7
+
+Nilai Matriks yang Habis Dibagi 3,5,7
+
+        6
+
+        7
+
+--------------------------------
